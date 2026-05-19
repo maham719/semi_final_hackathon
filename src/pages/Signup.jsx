@@ -24,7 +24,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     
     const res=await axios.post("/api/auth/register" ,form , {withCredentials:true})
     console.log(res.data)
-   navigate("/login")
+   navigate("/")
    } catch (error) {
     setError(error.response.data.message)
     console.log(error)
@@ -134,7 +134,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
         </form>
         <p className="text-base-content/80 mb-4 text-center">
           Already have an account?
-          <Link to={"/login"} className="link link-animated link-accent font-normal">
+          <Link to={"/"} className="link link-animated link-accent font-normal">
             Sign in instead
           </Link>
         </p>

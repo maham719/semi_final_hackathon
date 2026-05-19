@@ -20,7 +20,7 @@ const Login = () => {
     setAuth({ accessToken: res.data.accessToken, role: res.data.user.role })
     console.log(res.data)
   
-      navigate("/")
+      navigate("/userdashboard")
       
    } catch (error) {
     setError(error.response.data.message)

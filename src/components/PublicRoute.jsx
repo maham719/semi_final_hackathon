@@ -9,7 +9,7 @@ export default function PublicRoute({ children }) {
   }
 
   if (auth && auth.accessToken) {
-    return <Navigate to="/" />; 
+    return <Navigate to="/userdashboard" />; 
   }
 
   return children; 
