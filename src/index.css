@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* FlyonUI plugin (Tailwind v4 way) */
+@plugin "flyonui" {
+  themes: light --default, dark --prefersdark;
+}
+
+/* Iconify */
+@plugin "@iconify/tailwind4";
+
+/* FlyonUI variants (only if using JS components) */
+@import "flyonui/variants.css";
+
+/* Vendor CSS (IMPORTANT: missing semicolons fixed) */
+@import "flyonui/src/vendor/apexcharts.css";
+@import "flyonui/src/vendor/datatables.css";
+
+/* Optional: JS scanning source (only if needed) */
+@source "./node_modules/flyonui/dist/index.js";
+
+/* Dark mode helper (ONLY if using Tailwind dark:) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* FlyonUI menu active overrides */
+[data-theme="dark"]
+li:not(.menu-title, .menu-disabled)
+> :not(ul, .menu-title, .collapse, .accordion-content, .btn).menu-active {
+  background-color: var(--color-primary);
+  color: var(--color-primary-content);
+}
+
+[data-theme="black"]
+li:not(.menu-title, .menu-disabled)
+> :not(ul, .menu-title, .collapse, .accordion-content, .btn).menu-active {
+  background-color: var(--color-primary);
+  color: var(--color-primary-content);
+}
+
+[data-theme="luxury"]
+li:not(.menu-title, .menu-disabled)
+> :not(ul, .menu-title, .collapse, .accordion-content, .btn).menu-active {
+  background-color: var(--color-primary);
+  color: var(--color-primary-content);
+}
