@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import axios from "../api/axios.js";
+import axios from ".axios";
 import illustration from "../assets/images/illustration.png"
 import { Link } from 'react-router-dom'
 const Signup = () => {

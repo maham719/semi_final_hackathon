@@ -3,7 +3,7 @@ import illustration from "../assets/images/illustration.png"
 import { Link, useNavigate } from 'react-router-dom'
 import ToggleTheme from '../components/ToggleTheme.jsx'
 import { useAuth } from '../context/AuthContext.jsx'
-import axios from "../api/axios.js";
+import axios from "axios";
 const Login = () => {
    const {setAuth}=useAuth()
   const [form, setForm] = useState({
@@ -16,7 +16,7 @@ const Login = () => {
   const handlelogin=async(e)=>{
    e.preventDefault();
    try {
-    const res=await axios.post("https://semi-final-hackathon-backend-qsyq.vercel.app//api/auth/login" ,form , {withCredentials:true})
+    const res=await axios.post("https://semi-final-hackathon-backend-qsyq.vercel.app/api/auth/login" ,form , {withCredentials:true})
     setAuth({ accessToken: res.data.accessToken, role: res.data.user.role })
     console.log(res.data)
   

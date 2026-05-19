@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import axios from "../api/axios.js"
+import axios from ".axios"
 import { useAuth } from '../context/AuthContext.jsx'
 const Header = () => {
      const {auth,setAuth} =useAuth()
     const navigate=useNavigate()
     const handleLogut=async()=>{
         try {
-            await axios.post("https://semi-final-hackathon-backend-qsyq.vercel.app//api/auth/logout",{} , {withCredentials:true})
+            await axios.post("https://semi-final-hackathon-backend-qsyq.vercel.app/api/auth/logout",{} , {withCredentials:true})
             setAuth(null)
             navigate("/login")
         } catch (error) {
