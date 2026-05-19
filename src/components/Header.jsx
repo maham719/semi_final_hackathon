@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import axios from ".axios"
+import axios from "axios"
 import { useAuth } from '../context/AuthContext.jsx'
 const Header = () => {
      const {auth,setAuth} =useAuth()
