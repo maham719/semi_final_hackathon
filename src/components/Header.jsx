@@ -7,7 +7,7 @@ const Header = () => {
     const navigate=useNavigate()
     const handleLogut=async()=>{
         try {
-            await axios.post("/api/auth/logout",{} , {withCredentials:true})
+            await axios.post("https://semi-final-hackathon-backend-qsyq.vercel.app//api/auth/logout",{} , {withCredentials:true})
             setAuth(null)
             navigate("/login")
         } catch (error) {

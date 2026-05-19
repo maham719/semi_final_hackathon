@@ -16,7 +16,7 @@ const Login = () => {
   const handlelogin=async(e)=>{
    e.preventDefault();
    try {
-    const res=await axios.post("/api/auth/login" ,form , {withCredentials:true})
+    const res=await axios.post("https://semi-final-hackathon-backend-qsyq.vercel.app//api/auth/login" ,form , {withCredentials:true})
     setAuth({ accessToken: res.data.accessToken, role: res.data.user.role })
     console.log(res.data)
   

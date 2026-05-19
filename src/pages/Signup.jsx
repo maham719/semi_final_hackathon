@@ -22,7 +22,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     
    try {
     
-    const res=await axios.post("/api/auth/register" ,form , {withCredentials:true})
+    const res=await axios.post("https://semi-final-hackathon-backend-qsyq.vercel.app/api/auth/register" ,form , {withCredentials:true})
     console.log(res.data)
    navigate("/")
    } catch (error) {
