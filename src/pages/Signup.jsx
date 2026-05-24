@@ -114,7 +114,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
                 placeholder="············"
                 required=""
                 value={confirmPassword}
-                onChange={(e)=>setConfirmPassword(e.target.value)}
+                onChange={(e)=>setForm({...form,confirmPassword:e.target.value})}
               />
               <button
                 type="button"
